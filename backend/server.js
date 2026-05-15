@@ -4,6 +4,7 @@ import dotenv from 'dotenv'
 import connectDb from './config/db.js'
 import authRoutes from './routes/authRoutes.js'
 import userRoutes from './routes/userRoutes.js'
+import sosRoutes from './routes/sosRoutes.js'
 
 dotenv.config()
 
@@ -14,6 +15,7 @@ app.use(express.json())
 
 app.use('/api/auth', authRoutes)
 app.use('/api/user',userRoutes)
+app.use('/api/sos', sosRoutes)
 
 const PORT=process.env.PORT || 5000
 
