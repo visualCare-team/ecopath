@@ -6,6 +6,7 @@ import authRoutes from './routes/authRoutes.js'
 import userRoutes from './routes/userRoutes.js'
 import sosRoutes from './routes/sosRoutes.js'
 import hazardRoutes from './routes/hazardRoute.js'
+import savedPlacesRoutes from './routes/savedPlacesRoutes.js'
 
 dotenv.config()
 
@@ -18,6 +19,7 @@ app.use('/api/auth', authRoutes)
 app.use('/api/user',userRoutes)
 app.use('/api/sos', sosRoutes)
 app.use('/api/hazard',hazardRoutes)
+app.use('/api/places',savedPlacesRoutes)
 
 const PORT=process.env.PORT || 5000
 
