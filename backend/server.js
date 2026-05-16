@@ -5,6 +5,7 @@ import connectDb from './config/db.js'
 import authRoutes from './routes/authRoutes.js'
 import userRoutes from './routes/userRoutes.js'
 import sosRoutes from './routes/sosRoutes.js'
+import hazardRoutes from './routes/hazardRoute.js'
 
 dotenv.config()
 
@@ -16,6 +17,7 @@ app.use(express.json())
 app.use('/api/auth', authRoutes)
 app.use('/api/user',userRoutes)
 app.use('/api/sos', sosRoutes)
+app.use('/api/hazard',hazardRoutes)
 
 const PORT=process.env.PORT || 5000
 
